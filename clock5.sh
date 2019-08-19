@@ -2,6 +2,7 @@
 # Triggered through Crontab every 30 minutes
 export DISPLAY=:0
 
+volumeX=0.2
 onpi=0
 
 if [[ $onpi == 1 ]]
@@ -11,7 +12,7 @@ then
 else
   thishome=~/Documents/GitHub/bigben
 #  cmd="/Applications/VLC.app/Contents/MacOS/VLC -I rc --play-and-exit --demux=avformat"
-  cmd="$thishome/sox-14.4.2/play"
+  cmd="$thishome/sox-14.4.2/play --volume $volumeX"
 fi
 
 outfile=$thishome/log.txt
